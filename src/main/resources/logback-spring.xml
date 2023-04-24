@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+
+	<appender name="consoleAppender"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d %-5p %X{X-Request-Id} [%t] [%c:%L] %m%n</pattern>
+		</encoder>
+	</appender>
+
+    
+    <root level="info"> 
+        <appender-ref ref="consoleAppender" />
+    </root>
+
+  
+<!--   <logger name="org.apache.coyote.http11.Http11InputBuffer" level="debug" additivity="true"/> -->
+  <logger name="org.springframework" level="trace" additivity="true"/>
+<!--   <logger name="org.hibernate" level="info" additivity="true"/> -->
+    
+</configuration>
